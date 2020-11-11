@@ -1,17 +1,18 @@
 <div>
-  <center>
-  <h1>Калькулятор логических выпажений </h1>
-  
-  <select><option value="!">!</option>
-    <option value=""></select>
-  <input [(ngModel)]="firstOperand" type="number">
-  <select [(ngModel)] ="operator">
-   <option value="||">||</option>
-   <option value="&&">&&</option>
+    <H1>Калькулятор логических операций</H1>
+    <select [(ngModel)]="operator2" class="operator2">
+        <option value="!">!</option>
+        <option value="s"></option>
     </select>
-  
-<input [(ngModel)]="secondOperand" type="number">
-  <input (click)="doCalc()" type ="submit" value="Подтвердить">
-<p> Результат {{ result }} </p>
-<p>Текст ошибки {{ errorMessage }}</p>
+    <input [(ngNodel)]="firstOperand"type="number" class="firstOperand">
+    <select [(ngModel)]="operator">
+        <option value="||">||</option>
+        <option value="&&">&&</option>
+    </select>
+    <input [(ngNodel)]="secondOperand"type="number" class="secondOperand">
+    <input (click)="doCalc()" type="submit" value="Подтвердить">
+    <p class="result"> Результат: {{ result }}  </p>
+    <p class="errorMessage">Текст ошибки: {{ errorMessage}}</p>
 </div>
+ 
+  
